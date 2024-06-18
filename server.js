@@ -12,6 +12,7 @@ app.get('/events', (req, res) => {
   setInterval(() => {
     const data = { message: 'Hello from server!', timestamp: new Date() };
     res.write(`data: ${JSON.stringify(data)}\n\n`);
+    console.log("Entry added")
   }, 3000);
 
   req.on('close', () => {
