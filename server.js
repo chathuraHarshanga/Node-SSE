@@ -9,6 +9,7 @@ app.get('/events', (req, res) => {
   res.setHeader('Cache-Control', 'no-cache');
   res.setHeader('Connection', 'keep-alive');
   res.setHeader('X-Accel-Buffering', 'no');
+  res.flushHeaders();
 
   setInterval(() => {
     const data = { message: 'Hello from server!', timestamp: new Date() };
